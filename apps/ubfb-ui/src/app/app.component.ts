@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ubfb-ui-workspace-root',
+  selector: 'ubfb-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

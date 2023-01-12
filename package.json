@@ -4,6 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
+    "nx": "nx",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
     "postinstall": "node ./decorate-angular-cli.js"
   },
   "private": true,

@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "ubfb-ui-workspace",
+            "prefix": "ubfb",
             "style": "kebab-case"
           }
         ]
