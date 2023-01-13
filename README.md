@@ -6,7 +6,11 @@
 
 ## Development server
 
-Run `nx serve ubfb_ui` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve ubfb_ui` or `nx serve admin` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Installing npm dependencies
+
+Run `npx nx g @angular/material:ng-add --project=project\lib_name`
 
 ## Understand this workspace
 
