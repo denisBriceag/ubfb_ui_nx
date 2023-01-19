@@ -10,7 +10,7 @@ Run `nx serve ubfb_ui` or `nx serve admin` for a dev server. Navigate to http://
 
 ## Installing npm dependencies
 
-Run `npx nx g @angular/material:ng-add --project=project\lib_name`
+Run `npx nx g @angular/material:ng-add --project=project\lib_name`  or `npm install`
 
 ## Understand this workspace
 
@@ -23,3 +23,7 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## Generating components
+
+Run `nx g @nrwl/angular:component\module\etc... {projectPath} --project=project_name` 
