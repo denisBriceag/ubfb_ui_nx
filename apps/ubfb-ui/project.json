@@ -6,7 +6,7 @@
   "prefix": "ubfb-workspace",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:browser-esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/ubfb-ui",
@@ -53,7 +53,8 @@
           "browserTarget": "ubfb-ui:build:production"
         },
         "development": {
-          "browserTarget": "ubfb-ui:build:development"
+          "browserTarget": "ubfb-ui:build:development",
+          "port": 4200
         }
       },
       "defaultConfiguration": "development"

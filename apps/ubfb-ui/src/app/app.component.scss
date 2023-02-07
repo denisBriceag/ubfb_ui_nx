@@ -1,0 +1,15 @@
+.ubfb-viewport {
+  margin-top: 10rem;
+}
+
+@media(max-width: 920px) {
+  .ubfb-viewport {
+    margin-top: 8em;
+  }
+}
+
+@media(max-width: 430px) {
+  .ubfb-viewport {
+    margin-top: 6rem;
+  }
+}

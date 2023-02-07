@@ -1,0 +1,229 @@
+@import 'apps/ubfb-ui/src/assets/variables.scss';
+
+:host {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-scrolled {
+  min-height: 8rem;
+}
+
+.top-bar-container-wrapper {
+  transition: all 0.3s ease;
+  padding: 0 5% 0 4%;
+  min-height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+  //  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  gap: 1rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.15rem;
+
+  .top-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .top-bar-container-list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 3.5rem;
+      padding: 0 !important;
+
+      .top-bar-container-list-item {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .top-bar-container-list-item::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .link {
+        cursor: pointer;
+        font-size: 18px;
+        position: relative;
+        text-decoration: none;
+      }
+
+      .link::before,
+      .link::after {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+      }
+
+      .link::before {
+        content: '';
+      }
+
+      .link--leda {
+        overflow: hidden;
+        line-height: 2;
+        font-weight: 700;
+      }
+
+      .link--leda::before {
+        height: 2px;
+        top: calc(100% - 5px);
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+      }
+
+      .link--leda:hover::before {
+        transform-origin: 0 50%;
+        transform: scale3d(1, 1, 1);
+        color: $ubfb-color;
+      }
+
+      .link--leda::after {
+        content: attr(data-text);
+        height: 100%;
+        top: 0;
+        background: none;
+        transform-origin: 100% 50%;
+        transform: translate3d(150%, 0, 0);
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+      }
+
+      .link--leda:hover::after {
+        transform: translate3d(0, 0, 0);
+        color: $ubfb-color;
+      }
+
+      .link--leda span {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+      }
+
+      .link--leda:hover span {
+        transform: translate3d(-150%, 0, 0);
+      }
+    }
+  }
+
+  .top-bar-language-section {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.7rem;
+    color: $ubfb-icons-color;
+    font-size: 16px;
+
+    .top-bar-language-link {
+      transition: $ubfb-link-base-animation;
+    }
+
+    .top-bar-language-link:hover,
+    .top-bar-language-link:focus {
+      transform: scale(1.2);
+      color: $ubfb-color;
+      cursor: pointer;
+    }
+  }
+
+  .top-bar-hamburger-section {
+    display: none;
+
+    .top-bar-hamburger-link {
+      transition: $ubfb-link-base-animation;
+    }
+
+    .top-bar-hamburger-link:hover, .top-bar-hamburger-link:focus{
+      cursor: pointer;
+      transform: scale(1.2);
+      color: $ubfb-color;
+    }
+
+    mat-icon {
+      font-size: $ubfb-icon-font-size;
+      color: $ubfb-icons-color;
+    }
+  }
+
+  .top-bar-search-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    color: $ubfb-icons-color;
+
+    .top-bar-search-link {
+      transition: $ubfb-link-base-animation;
+    }
+
+    .top-bar-search-link:hover,
+    .top-bar-search-link:focus {
+      color: $ubfb-color;
+      cursor: pointer;
+      transform: scale(1.2)
+    }
+
+    mat-icon {
+      font-size: $ubfb-icon-font-size;
+    }
+  }
+}
+
+@media(max-width: 920px) {
+  .top-bar-container-wrapper {
+    min-height: 8rem !important;
+    justify-content: space-between;
+  }
+
+  .top-bar-container {
+    display: none !important;
+  }
+
+  .top-bar-language-section {
+    display: none !important;
+  }
+
+  .top-bar-hamburger-section {
+    display: flex !important;
+  }
+}
+
+@media(max-width: 430px) {
+  .top-bar-container-wrapper {
+    min-height: 6rem !important;
+    justify-content: space-between;
+  }
+
+  .top-bar-container {
+    display: none !important;
+  }
+
+  .top-bar-language-section {
+    display: none !important;
+  }
+
+  .top-bar-hamburger-section {
+    display: flex !important;
+  }
+}
+
+
+
