@@ -1,0 +1,69 @@
+<mat-toolbar #navbar [@scrolledNabvar]="scrolledState" class="top-bar-container-wrapper" ubfbNavbarDirective>
+  <div class="top-bar-hamburger-section" (click)="expandSidenav()" >
+    <a class="top-bar-hamburger-link">
+      <mat-icon  fontIcon='menu'></mat-icon>
+    </a>
+  </div>
+
+  <div class="top-bar-language-section">
+    <a class="top-bar-language-link"> EN </a>
+    <mat-divider [vertical]="true"></mat-divider>
+    <a class="top-bar-language-link"> RO </a>
+    <mat-divider [vertical]="true"></mat-divider>
+    <a class="top-bar-language-link"> RU </a>
+  </div>
+
+
+  <nav class="top-bar-container">
+    <ul class="top-bar-container-list">
+      <li class="top-bar-container-list-item">
+        <a class="link link--leda" data-text="MAIN">
+          <span>MAIN</span>
+        </a>
+      </li>
+      <li class="top-bar-container-list-item">
+        <a class="link link--leda" data-text="ABOUT" [matMenuTriggerFor]="dropdown">
+          <span>ABOUT</span>
+        </a>
+      </li>
+      <li class="top-bar-container-list-item" [matMenuTriggerFor]="categories">
+        <a class="link link--leda" data-text="CATEGORIES">
+          <span>CATEGORIES</span>
+        </a>
+      </li>
+      <li class="top-bar-container-list-item">
+        <a class="link link--leda" data-text="NEWS">
+          <span>NEWS</span>
+        </a>
+      </li>
+      <li class="top-bar-container-list-item">
+        <a class="link link--leda" data-text="CONTACTS">
+          <span>CONTACTS</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <mat-menu #dropdown>
+    <button mat-menu-item>Business</button>
+    <button mat-menu-item>Heritage</button>
+  </mat-menu>
+
+  <mat-menu #categories class="categories-menu">
+    <ng-container *ngFor="let cat of mockService.categories">
+      <button mat-menu-item>{{ cat }}</button>
+    </ng-container>
+  </mat-menu>
+
+  <div class="top-bar-search-section">
+    <a class="top-bar-search-link">
+      <mat-icon class="mat-icon-rtl-mirror" fontIcon="search"></mat-icon>
+    </a>
+    <mat-divider [vertical]="true"></mat-divider>
+    <a class="top-bar-search-link">
+      <mat-icon fontIcon="shopping_cart"></mat-icon>
+    </a>
+  </div>
+</mat-toolbar>
+
+

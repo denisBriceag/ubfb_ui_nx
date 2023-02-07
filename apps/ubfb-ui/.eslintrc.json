@@ -5,11 +5,12 @@
     {
       "files": ["*.ts"],
       "rules": {
+        "@typescript-eslint/no-inferrable-types": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "ubfbUiWorkspace",
+            "prefix": "ubfb",
             "style": "camelCase"
           }
         ],

@@ -53,7 +53,8 @@
           "browserTarget": "ubfb-ui:build:production"
         },
         "development": {
-          "browserTarget": "ubfb-ui:build:development"
+          "browserTarget": "ubfb-ui:build:development",
+          "port": 4200
         }
       },
       "defaultConfiguration": "development"
