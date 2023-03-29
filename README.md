@@ -24,6 +24,14 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-## Generating components
+## Generating components/modules/directives etc...
 
-Run `nx g @nrwl/angular:component\module\etc... {projectPath} --project=project_name` 
+Run `nx g @nrwl/angular:{buildngBlock} path/path/path --project={projectName}` 
+
+
+## Upgrading project
+Run `nx migrate next` This will fetch the latest metadata for package.json
+
+After that run `npm install` to install the latest metadata you have just fetched
+
+Finally, run `npx nx migrate --run-migrations` to update the migrations.json

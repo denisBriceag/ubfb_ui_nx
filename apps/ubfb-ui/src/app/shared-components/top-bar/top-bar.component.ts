@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import {  NgFor } from "@angular/common";
 import { takeUntil } from 'rxjs';
 
-import { SharedModule } from "../../shared/shared.module";
+import { SharedModule } from "../../modules/shared/shared.module";
 import { SideBarComponent } from '../side-bar/side-bar.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -14,10 +14,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from "@angular/material/menu";
 
 import { Destroyer } from '../../utils/destroyer.helper';
-import { NavbarService } from '../../shared/services/navbar-service/navbar.service';
+import { NavbarService } from '../../modules/shared/services/navbar-service/navbar.service';
 import { MocksService } from "../../mocks/mocks.service";
 
 import { ubfbTopbarAnimation } from "../../animations/ubfb-topbar.animation";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @Component({
   selector: 'ubfb-top-bar',
@@ -33,6 +34,7 @@ import { ubfbTopbarAnimation } from "../../animations/ubfb-topbar.animation";
     MatSidenavModule,
     SideBarComponent,
     MatMenuModule,
+    MatBadgeModule,
     NgFor,
     SharedModule,
   ],

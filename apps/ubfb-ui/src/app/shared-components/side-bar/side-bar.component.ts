@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { takeUntil } from 'rxjs';
 
-import { NavbarService } from '../../shared/services/navbar-service/navbar.service';
+import { NavbarService } from '../../modules/shared/services/navbar-service/navbar.service';
 import { Destroyer } from '../../utils/destroyer.helper';
 
 import { MatIconModule } from '@angular/material/icon';

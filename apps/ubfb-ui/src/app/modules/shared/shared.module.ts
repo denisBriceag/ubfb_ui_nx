@@ -4,7 +4,7 @@ import { UbfbNavbarDirective } from './directives/ubfb-navbar.directive';
 
 @NgModule({
   declarations: [
-    UbfbNavbarDirective
+    UbfbNavbarDirective,
   ],
   imports: [CommonModule],
   exports: [UbfbNavbarDirective]
