@@ -1,5 +1,5 @@
 .ubfb-viewport {
-  margin-top: 10rem;
+  margin-top: 11rem;
 }
 
 @media(max-width: 920px) {
@@ -12,4 +12,8 @@
   .ubfb-viewport {
     margin-top: 6rem;
   }
+}
+
+:host(.custom) {
+  border-radius: 30px !important;
 }

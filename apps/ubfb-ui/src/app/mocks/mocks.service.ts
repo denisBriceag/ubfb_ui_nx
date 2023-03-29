@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Subject} from "rxjs";
+import {Observable, of, Subject} from "rxjs";
+import {FavouriteProduct, favouriteProductData} from "./data";
 
 @Injectable({
   providedIn: 'root'
@@ -26,4 +27,8 @@ export class MocksService {
   ]
 
   public categories$: Subject<string[]> = new Subject<string[]>();
+
+  public getFavouriteProducts(): Observable<FavouriteProduct[]> {
+    return of(favouriteProductData)
+  }
 }

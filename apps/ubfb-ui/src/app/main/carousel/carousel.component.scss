@@ -1,0 +1,39 @@
+@import '../../../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.carousel-inner {
+  border-radius: 64px;
+
+  .carousel-animation {
+    transition: opacity 1s ease, visibility 1s ease-in;
+    float: left;
+  }
+
+  .carousel-animation.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .carousel-animation:not(.active) {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  transition: all 0.1s ease-in-out;
+  width: 4rem;
+  height: 4rem;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    transform: scale(1.1);
+    width: 5rem;
+    height: 5rem;
+  }
+}

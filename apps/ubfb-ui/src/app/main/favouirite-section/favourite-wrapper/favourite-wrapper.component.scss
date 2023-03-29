@@ -1,0 +1,35 @@
+@import '../../../../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'apps/ubfb-ui/src/assets/variables.scss';
+
+:host {
+  font-family: $main-font;
+}
+
+mat-card {
+  margin-bottom: 4%;
+  display: flex;
+  height: fit-content;
+
+  mat-card-header {
+    padding: 2% 4% 0;
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 4%;
+  }
+
+  mat-card-content {
+    //display: grid;
+    //grid-template-columns: 20% 20% 20%;
+    //padding: 0 4% 0 4%;
+    //display: grid;
+    //grid-template-columns: 30% 30% 30%;
+    //grid-column-gap: 4%;
+    //grid-row-gap: 4%;
+    //justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    //align-items: center;
+  }
+
+  border-radius: 64px;
+}

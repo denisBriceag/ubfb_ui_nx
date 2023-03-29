@@ -23,6 +23,6 @@ export function ubfbTopbarAnimation(): AnimationTriggerMetadata {
       })
     ),
     transition('default => scrolled', animate('100ms ease-in')),
-    transition('scrolled => default', animate('0.1s 100ms ease-out')),
+    transition('scrolled => default', animate('0.1s ease-out')),
   ]);
 }
