@@ -5,13 +5,14 @@ import { UbfbDashboardComponent } from './ubfb-dashboard/ubfb-dashboard.componen
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import {FavouriteSectionModule} from "./favouirite-section/favourite-section.module";
+import {SwiperModule} from "swiper/angular";
 
 @NgModule({
   declarations: [
     CarouselComponent,
     UbfbDashboardComponent,
   ],
-  imports: [CommonModule, MatIconModule, MatDividerModule, FavouriteSectionModule],
+  imports: [CommonModule, MatIconModule, MatDividerModule, FavouriteSectionModule, SwiperModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [UbfbDashboardComponent],
 })

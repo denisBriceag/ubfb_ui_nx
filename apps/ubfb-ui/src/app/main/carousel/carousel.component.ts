@@ -1,4 +1,13 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core'
+import SwiperCore , {
+  Navigation,
+  Pagination,
+  Autoplay,
+
+} from 'swiper';
 
 declare interface CarouselConfig {
   img: string;
@@ -10,6 +19,7 @@ declare interface CarouselConfig {
   selector: 'ubfb-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CarouselComponent {
   public readonly sliderArray: CarouselConfig[] = [
@@ -18,25 +28,12 @@ export class CarouselComponent {
     {img: "../../assets/carousel-img/sample.webp", alt: "", index: 2},
   ];
 
-  @ViewChild('carousel', { read: ElementRef}) public carousel: ElementRef;
-
-  public currentIndex: number = 0;
-
-  public nextSlide(): void {
-    if (this.currentIndex === this.sliderArray.length - 1) {
-      this.currentIndex = 0;
-      return;
-    }
-
-    this.currentIndex++
+  constructor() {
+    SwiperCore.use([
+      Navigation,
+      Pagination,
+      Autoplay
+    ]);
   }
 
-  public previousSlide(): void {
-    if (this.currentIndex === 0) {
-      this.currentIndex = this.sliderArray.length - 1;
-      return;
-    }
-
-    this.currentIndex--
-  }
 }

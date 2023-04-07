@@ -1,39 +1,87 @@
-@import '../../../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'apps/ubfb-ui/src/assets/variables.scss';
 
-.carousel-inner {
+.swiper {
+  height: 460px;
   border-radius: 64px;
+  color: #a19d9d;
 
-  .carousel-animation {
-    transition: opacity 1s ease, visibility 1s ease-in;
-    float: left;
-  }
+  .swiper-container {
+    width: 100%;
+    margin: 50px auto;
 
-  .carousel-animation.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .carousel-animation:not(.active) {
-    display: block;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
+    .swiper-slide {
+      background: #f1f1f1;
+      color: #000;
+      text-align: center;
+      line-height: 300px;
+    }
   }
 }
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
+.swiper-button-next, .swiper-button-prev, .swiper-pagination-bullets {
   transition: all 0.1s ease-in-out;
-  width: 4rem;
-  height: 4rem;
+  color: $ubfb-color !important;
+  font-weight: bold;
 }
 
-.carousel-control-next:hover,
-.carousel-control-prev:hover {
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    transform: scale(1.1);
-    width: 5rem;
-    height: 5rem;
-  }
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  transform: scale(1.5);
 }
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.5);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+//.carousel-inner {
+//  border-radius: 64px;
+//
+//  .carousel-animation {
+//    transition: opacity 1s ease, visibility 1s ease-in;
+//    float: left;
+//  }
+//
+//  .carousel-fade, .carousel-item {
+//    opacity: 0.3;
+//    transition-property: opacity;
+//    transform: none;
+//  }
+//
+//  .carousel-animation.active {
+//    opacity: 1;
+//    visibility: visible;
+//  }
+//
+//  .carousel-animation:not(.active) {
+//    display: block;
+//    position: absolute;
+//    opacity: 0.3;
+//    visibility: hidden;
+//  }
+//}
+//
+//.carousel-control-next-icon,
+//.carousel-control-prev-icon {
+//  transition: all 0.1s ease-in-out;
+//  width: 4rem;
+//  height: 4rem;
+//}
+//
+//.carousel-control-next:hover,
+//.carousel-control-prev:hover {
+//  .carousel-control-next-icon,
+//  .carousel-control-prev-icon {
+//    transform: scale(1.1);
+//    width: 5rem;
+//    height: 5rem;
+//  }
+//}
+
+
