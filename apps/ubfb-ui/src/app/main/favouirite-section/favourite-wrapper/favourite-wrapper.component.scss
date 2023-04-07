@@ -5,9 +5,12 @@
   font-family: $main-font;
 }
 
+
+
+
 mat-card {
   margin-bottom: 4%;
-  display: flex;
+  //display: grid;
   height: fit-content;
 
   mat-card-header {
@@ -18,18 +21,24 @@ mat-card {
   }
 
   mat-card-content {
-    //display: grid;
-    //grid-template-columns: 20% 20% 20%;
-    //padding: 0 4% 0 4%;
-    //display: grid;
-    //grid-template-columns: 30% 30% 30%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2%;
+    padding: 0 4% 4% 4%;
+    justify-content: flex-start;
+    //grid-template-columns: repeat(auto-fit, minmax(10%, 33%));
     //grid-column-gap: 4%;
     //grid-row-gap: 4%;
     //justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    //align-items: center;
+    //width: 100%;
   }
 
   border-radius: 64px;
 }
+
+//@media scree and (max-width: 1864px) {
+//  mat-card-content {
+//    grid-template-columns: repeat(3, 33%);
+//  }
+//}

@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>Shop your favourites</mat-card-header>
-  <mat-card-content>
+  <mat-card-content class="container">
     <ng-container *ngFor="let product of mockService.getFavouriteProducts() | async">
       <ubfb-favourite-item [productItem]="product"></ubfb-favourite-item>
     </ng-container>

@@ -1,4 +1,14 @@
-<mat-card class="ubfb-product-item-wrapper">
-  <img class="product-item-image" [src]="productItem.imgUrl" [alt]="productItem.name" mat-card-md-image>
-  <mat-card-title>{{ productItem.name }}</mat-card-title>
-</mat-card>
+<!--<mat-card class="ubfb-product-item-wrapper">-->
+<!--  <img class="card-img-top" [src]="productItem.imgUrl" [alt]="productItem.name" mat-card-md-image>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--  </div>-->
+<!--</mat-card>-->
+<div class="card" >
+  <img [src]="productItem.imgUrl" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>

@@ -15,38 +15,52 @@ export const favouriteProductData: FavouriteProduct[] = [
     soldOut: false
   },
   {
-    id: 1,
+    id: 2,
     name: 'Ardbeg',
     price: 890,
     imgUrl: '../../assets/products-sample/Ardbeg.webp',
     soldOut: false
   },
   {
-    id: 1,
+    id: 2,
     name: 'Ardbeg',
     price: 890,
     imgUrl: '../../assets/products-sample/Ardbeg.webp',
     soldOut: false
   },
   {
-    id: 1,
+    id: 3,
     name: 'Ardbeg',
     price: 890,
     imgUrl: '../../assets/products-sample/Ardbeg.webp',
     soldOut: false
   },
   {
-    id: 1,
+    id: 5,
     name: 'Ardbeg',
     price: 890,
     imgUrl: '../../assets/products-sample/Ardbeg.webp',
     soldOut: false
   },
   {
-    id: 1,
+    id: 6,
     name: 'Ardbeg',
     price: 890,
     imgUrl: '../../assets/products-sample/Ardbeg.webp',
     soldOut: false
-  }
+  },
+  {
+    id: 7,
+    name: 'Ardbeg',
+    price: 890,
+    imgUrl: '../../assets/products-sample/Ardbeg.webp',
+    soldOut: false
+  },
+  {
+    id: 8,
+    name: 'Ardbeg',
+    price: 890,
+    imgUrl: '../../assets/products-sample/Ardbeg.webp',
+    soldOut: false
+  },
 ]
