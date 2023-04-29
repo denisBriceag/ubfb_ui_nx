@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>Combo sets</mat-card-header>
+  <mat-card-content class="container">
+    <div class="row row-cols-4">
+      <ng-container *ngFor="let comboItem of comboItems$ | async">
+        <ubfb-product-item [productItem]="comboItem"></ubfb-product-item>
+      </ng-container>
+    </div>
+  </mat-card-content>
+</mat-card>

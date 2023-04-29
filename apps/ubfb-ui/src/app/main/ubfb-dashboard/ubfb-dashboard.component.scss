@@ -7,3 +7,9 @@
   padding: 0 10% 0 10%;
   overflow-y: hidden;
 }
+
+@media (max-width: 768px) {
+  :host {
+    padding: 0 2% 0 2%;
+  }
+}

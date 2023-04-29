@@ -1,0 +1,71 @@
+@import 'apps/ubfb-ui/src/assets/variables.scss';
+@import 'apps/ubfb-ui/src/assets/mixins.scss';
+
+:host {
+  position: relative;
+  margin-bottom: 2%;
+
+  .card {
+    @include product-container;
+
+    .card-img-top {
+      @include product-image;
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+
+      .card-title {
+        height: 30px;
+      }
+    }
+
+    .card-add-to-cart {
+      position: absolute;
+      right: 30px;
+      top: 25px;
+
+      .card-add-to-cart-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        border: 1px solid $ubfb-icons-color;
+        border-radius: 12px;
+        background-color: $ubfb-imperor-white;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+
+      .card-add-to-cart-button:hover {
+        color: $ubfb-imperor-white;
+        background-color: $ubfb-color;
+        border: 1px solid $ubfb-color;
+      }
+    }
+  }
+
+  .card:hover {
+    @include product-container-hovered;
+  }
+}
+
+@media (max-width: 1440px) {
+  :host {
+    width: 33% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  :host {
+    width: 100% !important;
+  }
+}

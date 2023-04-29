@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ubfb-ui-workspace/ubfb-common-ui": ["libs/ubfb-common-ui/src/index.ts"],
       "@ubfb-ui-workspace/ubfb-login": ["libs/ubfb-login/src/index.ts"]
     }
   },

@@ -5,9 +5,14 @@ $main-font: 'Raleway', sans-serif;
 $ubfb-icon-font-size: 25px;
 
 // Colors
-$ubfb-color: #00AFEF;
+$ubfb-color: #00afef;
 $ubfb-icons-color: #a19d9d;
 $ubfb-product-border: #f5f1f1;
+$ubfb-imperor-white: white;
+
+//Border-radius
+$border-radius-desktop: 64px;
+$border-radius-mobile: 24px;
 
 // Animations
-$ubfb-link-base-animation: transform .2s;
+$ubfb-link-base-animation: transform 0.2s;
