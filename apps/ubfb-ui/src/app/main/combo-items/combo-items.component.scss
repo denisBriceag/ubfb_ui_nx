@@ -1,0 +1,26 @@
+@import '../../../../../../node_modules/bootstrap/scss/bootstrap';
+@import 'apps/ubfb-ui/src/assets/variables.scss';
+@import 'apps/ubfb-ui/src/assets/mixins.scss';
+
+:host {
+  font-family: $main-font;
+}
+
+mat-card {
+  @include material-card;
+
+  mat-card-header {
+    @include material-card-title
+  }
+
+  mat-card-content {
+    @include mat-card-content-grid
+  }
+
+}
+
+@media (max-width: 768px) {
+  mat-card {
+    border-radius: $border-radius-mobile;
+  }
+}

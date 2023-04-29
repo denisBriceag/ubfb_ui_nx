@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>Shop your favourites</mat-card-header>
+  <mat-card-content class="container">
+    <div class="row row-cols-4">
+      <ng-container *ngFor="let product of favProducts$ | async">
+        <ubfb-product-item [productItem]="product"></ubfb-product-item>
+      </ng-container>
+    </div>
+  </mat-card-content>
+</mat-card>

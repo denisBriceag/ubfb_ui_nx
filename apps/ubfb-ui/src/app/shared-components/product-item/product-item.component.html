@@ -1,0 +1,17 @@
+<div class="card">
+  <img
+    [src]="productItem.imgUrl"
+    class="card-img-top"
+    [alt]="productItem.name"
+  />
+  <div class="card-body">
+    <h3 class="card-title">{{ productItem.name }}</h3>
+    <p class="card-text">
+      {{ productItem.description | textCutter }}
+    </p>
+    <h3 class="card-title">{{ productItem.price | currency : 'MDL' }}</h3>
+  </div>
+  <div class="card-add-to-cart" *ngIf="isIconVisible">
+    <button matTooltip="Add to cart" class="card-add-to-cart-button">+</button>
+  </div>
+</div>

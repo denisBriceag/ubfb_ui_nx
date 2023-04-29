@@ -6,6 +6,20 @@ const routes: Routes = [
   {
     path: '',
     component: UbfbDashboardComponent
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule).catch(() => {
+      throw new Error('Lazy module was not loaded properly');
+    })
+  },
+  {
+    path: 'about',
+    component: UbfbDashboardComponent
+  },
+  {
+    path: 'about',
+    component: UbfbDashboardComponent
   }
 ];
 

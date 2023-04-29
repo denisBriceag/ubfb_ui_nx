@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import {Observable, of, Subject} from "rxjs";
-import {FavouriteProduct, favouriteProductData} from "./data";
+import { Observable, of, Subject } from 'rxjs';
+import {comboItemsData, favouriteProductData} from './data';
+import { ProductItem } from "./shared-models";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MocksService {
   public categories: string[] = [
@@ -22,13 +23,17 @@ export class MocksService {
     'beer',
     'water',
     'coffee and tea',
-    "children´s champagne",
-    'sparkling water'
-  ]
+    'children´s champagne',
+    'sparkling water',
+  ];
 
-  public categories$: Subject<string[]> = new Subject<string[]>();
+  public readonly categories$: Subject<string[]> = new Subject<string[]>();
 
-  public getFavouriteProducts(): Observable<FavouriteProduct[]> {
-    return of(favouriteProductData)
+  public getFavouriteProducts(): Observable<ProductItem[]> {
+    return of(favouriteProductData);
+  }
+
+  public getComboItems(): Observable<ProductItem[]> {
+    return of(comboItemsData);
   }
 }

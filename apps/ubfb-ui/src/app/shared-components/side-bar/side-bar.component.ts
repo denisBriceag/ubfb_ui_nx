@@ -1,18 +1,17 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { takeUntil } from 'rxjs';
 
 import { NavbarService } from '../../modules/shared/services/navbar-service/navbar.service';
-import { Destroyer } from '../../utils/destroyer.helper';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MocksService } from '../../mocks/mocks.service';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
-
+@UntilDestroy()
 @Component({
   selector: 'ubfb-side-bar',
   standalone: true,
@@ -27,15 +26,13 @@ import { MocksService } from '../../mocks/mocks.service';
     MatTabsModule,
   ],
 })
-export class SideBarComponent extends Destroyer implements OnInit, OnDestroy {
+export class SideBarComponent implements OnInit {
   public isOpened: boolean = false;
 
   constructor(
     private navbarService: NavbarService,
     public mockService: MocksService
-  ) {
-    super();
-  }
+  ) {}
 
   public onSidenavClosed(): void {
     this.navbarService.resetSidenavToggle();
@@ -43,13 +40,9 @@ export class SideBarComponent extends Destroyer implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.navbarService.sidenavToggle
-      .pipe(takeUntil(this.destroy$))
+      .pipe(untilDestroyed(this))
       .subscribe((isOpened) => {
         this.isOpened = isOpened;
       });
-  }
-
-  public ngOnDestroy(): void {
-    this.destroyMethod();
   }
 }
